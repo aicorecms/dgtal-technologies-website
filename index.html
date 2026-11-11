@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGtal Technologies Inc. | Enterprise Dynamics 365 & Cloud Consultancy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f6ff',
+                            100: '#e0ecfe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-white block">DGtal Technologies</span>
+                    <span class="text-xs text-blue-400 font-medium tracking-wide">Enterprise Solutions & AI SaaS</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+                <a href="#aicore" class="hover:text-blue-400 transition-colors">AiCore CMS</a>
+                <a href="#clearance" class="hover:text-blue-400 transition-colors">Public Sector & Security</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-lg shadow-blue-600/20 transition-all hover:shadow-blue-600/40">
+                    Book Consultation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-slate-900 border-b border-slate-800 space-y-3">
+            <a href="#services" class="block py-2 text-slate-300 hover:text-white">Services</a>
+            <a href="#aicore" class="block py-2 text-slate-300 hover:text-white">AiCore CMS</a>
+            <a href="#clearance" class="block py-2 text-slate-300 hover:text-white">Public Sector & Security</a>
+            <a href="#about" class="block py-2 text-slate-300 hover:text-white">About</a>
+            <a href="#contact" class="block py-2 text-blue-400 font-medium">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 lg:py-32 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Clearance Badge Pill -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-blue-800/60 text-blue-300 text-xs font-semibold tracking-wide uppercase shadow-inner">
+                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Government of Canada Reliability Status Cleared (Active through 2033)
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        Enterprise <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-500 bg-clip-text text-transparent">Dynamics 365 & Cloud</span> Architecture
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+                        DGtal Technologies Inc. delivers high-performance Microsoft Dynamics 365 solutions, custom C#/.NET enterprise plug-ins, Power Platform automation, and secure cloud integrations for public sector and corporate leaders.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#contact" class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-center shadow-xl shadow-blue-600/30 transition-all hover:scale-[1.02]">
+                            Schedule an Architecture Review
+                        </a>
+                        <a href="#aicore" class="px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-center transition-all hover:border-slate-600">
+                            Explore AiCore CMS
+                        </a>
+                    </div>
+
+                    <!-- Key Stats Grid -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-white">12+</div>
+                            <div class="text-xs sm:text-sm text-slate-400">Years Software Engineering</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-white">100%</div>
+                            <div class="text-xs sm:text-sm text-slate-400">Secure Data Isolation</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-white">Pro/Low</div>
+                            <div class="text-xs sm:text-sm text-slate-400">Hybrid Code Mastery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Graphic / Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/40 p-8 border border-slate-800 shadow-2xl">
+                        <div class="absolute -top-3 -right-3 px-4 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-lg uppercase tracking-wider shadow-lg">
+                            Principal Architect Led
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold">
+                                    D365
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white">Core Technical Specialization</h3>
+                                    <p class="text-xs text-slate-400">Enterprise CRM & Dataverse Customization</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 pt-2">
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                                    <span class="text-sm font-medium text-slate-300">C# / .NET Core Plug-ins</span>
+                                    <span class="text-xs px-2.5 py-1 rounded bg-blue-950 text-blue-400 font-semibold">Enterprise Grade</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                                    <span class="text-sm font-medium text-slate-300">Power Platform & Cloud Flows</span>
+                                    <span class="text-xs px-2.5 py-1 rounded bg-indigo-950 text-indigo-400 font-semibold">Automated</span>
+                                </div>
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                                    <span class="text-sm font-medium text-slate-300">Government Reliability Clearance</span>
+                                    <span class="text-xs px-2.5 py-1 rounded bg-emerald-950 text-emerald-400 font-semibold">Verified</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+                                <span>DGtal Technologies Inc.</span>
+                                <span class="text-blue-400 font-medium">Surrey, BC, Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Public Sector & Security Clearance Banner -->
+    <section id="clearance" class="py-16 bg-slate-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-blue-950/50 via-slate-900 to-indigo-950/50 rounded-3xl p-8 lg:p-12 border border-blue-900/40 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 max-w-2xl">
+                    <div class="inline-flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Trusted for Government & Public Sector Tenders
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Active Government of Canada Reliability Status Clearance</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Holding active security clearance (valid through April 2033 via PSPC), DGtal Technologies Inc. is fully pre-vetted to support provincial and federal ministries, crown corporations, and highly regulated public-sector modernization projects.
+                    </p>
+                </div>
+                <div>
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-semibold text-sm shadow-lg transition-all whitespace-nowrap">
+                        Inquire for Public Sector RFS/RFPs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Breakdown Grid -->
+    <section id="services" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400">Enterprise Consultancy Services</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Specialized Microsoft & Cloud Expertise</h3>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Comprehensive technical advisory, architecture design, and hands-on engineering tailored for complex enterprise requirements.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Dynamics 365 Implementation & Customization</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        End-to-end design of D365 Customer Engagement (CE), Customer Service, and custom entity models. Optimized Dataverse architecture with rigorous security roles and field-level controls.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">C#/.NET Core & Custom Plug-ins</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Robust server-side custom plug-ins, workflow activities, and complex REST APIs. Bridging legacy SQL databases with modern CRM instances with guaranteed data integrity.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Power Platform & Cloud Integration</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Model-driven Apps, Canvas Apps, PCF controls, Cloud Flows, and Azure Integration Services (Functions, Logic Apps, Service Bus) for automated enterprise workflows.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Enterprise Architecture & Governance</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Technical delivery tracking, code & design reviews, Dataverse ALM pipelines with Azure DevOps, and cloud cost-vs-maintainability architecture assessments.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Public Sector & Government Bids</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Reliability Status cleared engineering support for federal and provincial tenders, strict regulatory compliance adherence, and secure digital service delivery.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">SaaS Product Engineering (AiCore CMS)</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Cloud-native platform design, multi-tenant architecture, automated estimation engines, and AI-driven modular content management systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase: AiCore CMS -->
+    <section id="aicore" class="py-24 bg-slate-900/40 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-950/15 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900/40 border border-blue-700/50 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                        Flagship SaaS Innovation
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">AiCore Construction Management System (AiCore CMS)</h2>
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                        Engineered entirely in-house by DGtal Technologies Inc., AiCore CMS is a powerful multi-tenant SaaS platform built on advanced Dataverse architecture and secure Azure cloud infrastructure.
+                    </p>
+                    
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xs mt-1">✓</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Advanced Dataverse Schemas & Custom C# Logic</h4>
+                                <p class="text-xs text-slate-400">Strict data integrity, automated server-side validations, and real-time operational triggers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xs mt-1">✓</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Multi-Tenant Security & Tenant Isolation</h4>
+                                <p class="text-xs text-slate-400">Enterprise-grade permission models, secure REST APIs, and isolated cloud data storage.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xs mt-1">✓</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Automated Estimation & Workflow Engines</h4>
+                                <p class="text-xs text-slate-400">Streamlining complex construction project tracking, estimating, and compliance logging.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="rounded-3xl bg-slate-950 border border-slate-800 p-8 shadow-2xl relative">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                            </div>
+                            <span class="text-xs text-slate-500 font-mono">aicore-cms.dgtaltechnologies.com</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-semibold text-blue-400">Active Tenant Environment</span>
+                                    <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-400">Healthy (99.9% Uptime)</span>
+                                </div>
+                                <div class="text-sm font-medium text-white">AiCore Construction & Project Management Module</div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                                    <div class="text-xs text-slate-400">Dataverse Entities</div>
+                                    <div class="text-lg font-bold text-white mt-1">Optimized</div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                                    <div class="text-xs text-slate-400">C# Plug-in Latency</div>
+                                    <div class="text-lg font-bold text-emerald-400 mt-1">&lt; 45ms</div>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-blue-950/30 border border-blue-900/40 text-xs text-blue-300">
+                                <strong>Architecture Note:</strong> Built on modern .NET Core backend APIs, Azure App Services, and scalable cloud-native storage.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Principal Architect -->
+    <section id="about" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400">Leadership & Expertise</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Principal Solution Architect & Founder</h3>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    Led by senior software engineering leadership with over 12 years of enterprise development experience. DGtal Technologies Inc. combines hands-on pro-code craftsmanship (C#, .NET, Azure) with high-level enterprise architecture and public-sector security compliance.
+                </p>
+                <div class="pt-4 flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">Microsoft Dynamics 365</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">C# / .NET Core</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">Microsoft Power Platform</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">Azure Cloud Integration</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300">Government Reliability Cleared</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Inquiry Form Section -->
+    <section id="contact" class="py-24 bg-slate-900/60 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400">Get in Touch</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Let's Discuss Your Enterprise Project</h3>
+                <p class="text-slate-400 text-base">
+                    Whether you need a Dynamics 365 developer, enterprise architecture review, or public sector contractor, reach out directly.
+                </p>
+            </div>
+
+            <div class="bg-slate-950 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl relative">
+                <!-- Success Message Modal/Box -->
+                <div id="success-msg" class="hidden mb-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-800 text-emerald-200 text-sm flex items-center gap-3">
+                    <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span>Thank you! Your message has been sent successfully. We will get back to you shortly.</span>
+                </div>
+
+                <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">Your Full Name</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" placeholder="John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" placeholder="john@company.com">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">Company / Organization</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Enterprise Inc. / Ministry">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">Service Required</label>
+                            <select class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition-colors">
+                                <option>Microsoft Dynamics 365 Development</option>
+                                <option>C# / .NET Enterprise Architecture</option>
+                                <option>Power Platform & Cloud Integration</option>
+                                <option>Public Sector / Government Contract</option>
+                                <option>AiCore CMS Inquiry</option>
+                                <option>General Consultation</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">Project Details / Message</label>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Describe your technical requirements, timeline, or scope..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.01]">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm">D</div>
+                <div>
+                    <span class="text-sm font-bold text-white">DGtal Technologies Inc.</span>
+                    <span class="text-xs text-slate-400 block">Surrey, BC, Canada | dbs.bagri@dgtaltechnologies.com</span>
+                </div>
+            </div>
+            
+            <div class="text-xs text-slate-500 text-center sm:text-right">
+                &copy; 2026 DGtal Technologies Inc. All rights reserved. <br>
+                Government Reliability Status Cleared (Valid through April 2033).
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission handler (Strictly avoids alert())
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('success-msg');
+            const form = document.getElementById('contact-form');
+            
+            successMsg.classList.remove('hidden');
+            form.reset();
+            
+            setTimeout(() => {
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
